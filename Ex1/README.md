@@ -20,3 +20,6 @@
 ```
 
 打印格式如下`1->2->5->3`，具体代码规定，请参考ex1.java文件。
+
+加分项：
+编写public Node reverseLinkList(head){}函数，反转链表。（+5分）
