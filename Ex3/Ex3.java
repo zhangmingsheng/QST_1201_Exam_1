@@ -46,7 +46,7 @@ public class Ex3 {
 			}
 			ip_num = String.valueOf(ip_time2.size());
 		}
-		//释放工作，输出。
+		//释放资源，输出。
 		public void cleanup(Context context) throws IOException,
 				InterruptedException {
 			context.write(new Text("IP number"), new Text(ip_num));
