@@ -1,4 +1,10 @@
-题目3：编写MapReduce，统计`/user/hadoop/mapred_dev_double/ip_time`与`/user/hadoop/mapred_dev_double/ip_time_2`当中，重复重现的IP数量(40分)
+题目3：编写MapReduce，统计这两个文件
+
+`/user/hadoop/mapred_dev_double/ip_time`
+
+`/user/hadoop/mapred_dev_double/ip_time_2`
+
+当中，重复出现的IP的数量(40分)
 
 ---
 加分项：
