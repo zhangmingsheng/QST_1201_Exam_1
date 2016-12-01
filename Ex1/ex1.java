@@ -15,14 +15,16 @@ public class QSTLinkList
 		}
 	}
 	private static void printLinkList(Node head) {
-		if(head == null){
-			return head;
+		if (head == null) {
+			return;
 		}
 		Node current = head;
-		while(current != null){
-			System.out.println(current.value);
-			current = current.next;
-		}
+		String string = ""+current.value;
+		while(current != null) {
+			string = string + "->" + current.value;
+				current = current.next;
+		} 
+		System.out.println(string);
 	}
   	public Node reverseLinkList(head){
 		Stack<Node> stack = new Stack<Node>();
