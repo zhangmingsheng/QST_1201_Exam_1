@@ -28,13 +28,13 @@ public class Ex2 {
 			ip_time.add(line[0]);
 			ip_num = String.valueOf(ip_time.size());
 		}
-
+		//释放资源，输出。	
 		public void cleanup(Context context) throws IOException,
 				InterruptedException {
 			context.write(new Text("IP number"), new Text(ip_num));
 		}
 	}
-
+	//没有reduce	
 	public static class Reduce extends Reducer<Text, Text, Text, Text> {
 		public void reduce(Text key, Iterator<Text> values,
 				OutputCollector<Text, Text> output, Reporter report)
