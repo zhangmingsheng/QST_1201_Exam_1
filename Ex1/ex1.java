@@ -20,23 +20,26 @@ public class QSTLinkList
 		}
 		Node current = head;
 		String string = ""+current.value;
-		while(current != null) {
-			string = string + "->" + current.value;
+		while(current.next != null) {
+			string = string + "->" + current.next.value;
 				current = current.next;
 		} 
 		System.out.println(string);
 	}
   	public Node reverseLinkList(head){
-		Stack<Node> stack = new Stack<Node>();
-		Node node = head;
-		while(head != null){
-			stack.push(head);
-			head = head.next;
+		if (head == null) {  
+             return head;
+         }  
+  		Node node=head;
+		Node newNode=null;
+		while(node.next!=null){
+			Node temp=node.next;
+			node.next=newNode;
+			newNode=node;
+			node=temp;
 		}
-		while(!stack.isEmpty()){
-			node = stack.pop();
-			System.out.println(node.value);
-		}
+		node.next=newNode;
+		return node;
 	}
   public static void main( String[] args ){
     int[] arr = {1,3,5,7,2,4};
