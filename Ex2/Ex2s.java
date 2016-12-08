@@ -14,8 +14,8 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class Ex2s {
 
-	public static class Map extends Mapper<Object, Text, Text, NullWritable> {
-		public void map(Object key, Text value, Context context)
+	public static class Map extends Mapper<LongWritable, Text, Text, NullWritable> {
+		public void map(LongWritable key, Text value, Context context)
 				throws IOException, InterruptedException {
 			String[] line = value.toString().split("\t");
 			context.write(new Text(line[0]), NullWritable.get());
